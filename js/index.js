@@ -42,7 +42,19 @@ const libros = [{
 
 //Tu codigo JS va acá
 
+const filtrarAutor = (libros, autor) => {
 
+    const librosFiltrados = [];
+
+    for (let i = 0; i < libros.length; i++) {
+
+        if (libros[i].autor === autorFiltrado ) {
+
+            librosFiltrados.push(libros[i]);
+        }        
+    }
+    return librosFiltrados;
+}
 
 
 
