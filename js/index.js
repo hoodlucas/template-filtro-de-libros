@@ -48,3 +48,54 @@ const libros = [{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mostrarResultado() {
+    // Caputamos el div en donde van a estar los libros y el autor seleccionado
+    let contenedor = document.querySelector('#libros')
+    let autorSeleccionado = document.querySelector('#autor')
+
+
+    // Como son varias opciones, seleccionamos el valor específico.
+    let valorSeleccionado = autorSeleccionado.value
+
+    // Llamamos a la 1ra función
+    let librosFiltrados = filtrarAutor(libros, valorSeleccionado)
+
+    contenedor.innerText = ""
+
+    // Recorremos cada uno de los libros filtrados
+    for (let i = 0; i < librosFiltrados.lenght; i++) {
+        var libro = librosFiltrados[i]
+
+        // Sumamos la foto, título, autor y precio por c/u.
+        contenedor.innerHTML = contenedor.innerHTML + 
+            `<div class="card" style="width: 18rem;">
+            <img src="${libro.url}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${libro.titulo}</h5>
+                <p class="card-text">Autor: ${libro.autor}</p>
+                <span>Precio: $${libro.precio}</span>
+            </div>
+            </div>`
+    }
+}
