@@ -55,6 +55,7 @@ const filtrarAutor = (libros, autor) => {
     }
     return librosFiltrados;
 }
+console.log(filtrarAutor(libros,'William Golding'));
 
 
 
