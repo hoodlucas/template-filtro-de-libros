@@ -48,14 +48,15 @@ const filtrarAutor = (libros, autor) => {
 
     for (let i = 0; i < libros.length; i++) {
 
-        if (libros[i].autor === autorFiltrado ) {
+        if (libros[i].autor === autor ) {
 
             librosFiltrados.push(libros[i]);
         }        
     }
     return librosFiltrados;
 }
-console.log(filtrarAutor(libros,'William Golding'));
+
+// Para probar: console.log(filtrarAutor(libros,'Julio Verne'));
 
 
 
