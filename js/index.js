@@ -48,3 +48,20 @@ const libros = [{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// Evento change: Vincula la función MostrarFiltrados al select a través del método onchange.
+
+document.getElementById('autor').onchange = MostrarFiltrados;
+
+module.exports = { MostrarFiltrados, libros, filtrarAutor };
+
